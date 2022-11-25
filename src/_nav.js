@@ -1,115 +1,112 @@
-import React from 'react'
-import CIcon from '@coreui/icons-react'
+import React from "react";
+import CIcon from "@coreui/icons-react";
 import {
-
   cilCalendar,
   cilTruck,
   cilPeople,
   cilCart,
-
   cilInfo,
   cilList,
-
-} from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+} from "@coreui/icons";
+import { CNavGroup, CNavItem, CNavTitle } from "@coreui/react";
 
 const _nav = [
   {
     component: CNavItem,
-    name: 'Lịch làm việc',
-    to: '/workcalendar',
+    name: "Lịch làm việc",
+    to: "/workcalendar",
     icon: <CIcon icon={cilCalendar} customClassName="nav-icon" />,
     badge: {
-      color: 'info',
-      text: 'NEW',
+      color: "info",
+      text: "NEW",
     },
   },
   {
     component: CNavTitle,
-    name: 'BO',
+    name: "Quản lý",
   },
   {
     component: CNavItem,
-    name: 'Lịch thu gomaaa',
-    to: '/theme/colors',
+    name: "Lịch thu gom",
+    to: "/theme/colors",
     icon: <CIcon icon={cilCalendar} customClassName="nav-icon" />,
   },
   {
     component: CNavGroup,
-    name: 'Quản lý thông tin',
-    to: '/buttons',
+    name: "Quản lý thông tin",
+    to: "/buttons",
     icon: <CIcon icon={cilInfo} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Thông tin nhân viên',
-        to: '/buttons/buttons',
+        name: "Thông tin nhân viên",
+        to: "/buttons/buttons",
         icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
-        name: 'Thông tin phương tiện',
-        to: '/buttons/button-groups',
+        name: "Thông tin phương tiện",
+        to: "/buttons/button-groups",
         icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
-        name: 'Thông tin MCPs',
-        to: '/buttons/dropdowns',
+        name: "Thông tin MCPs",
+        to: "/buttons/dropdowns",
         icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
       },
     ],
   },
   {
     component: CNavGroup,
-    name: 'Quản lý công việc',
-    to: '/buttons',
+    name: "Quản lý công việc",
+    to: "/buttons",
     icon: <CIcon icon={cilList} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Chỉ định phương tiện',
-        to: '/buttons/buttons',
+        name: "Chỉ định phương tiện",
+        to: "/buttons/buttons",
       },
       {
         component: CNavItem,
-        name: 'Tạo tuyến đường',
-        to: '/buttons/button-groups',
+        name: "Tạo tuyến đường",
+        to: "/buttons/button-groups",
       },
       {
         component: CNavItem,
-        name: 'Chỉ định nhân viên',
-        to: '/buttons/dropdowns',
+        name: "Chỉ định nhân viên",
+        to: "/buttons/dropdowns",
       },
     ],
   },
   {
     component: CNavTitle,
-    name: 'employee',
+    name: "Nhân viên",
   },
- 
+
   {
     component: CNavGroup,
-    name: 'Thông tin công việc',
-    to: '/buttons',
+    name: "Thông tin công việc",
+    to: "/buttons",
     icon: <CIcon icon={cilInfo} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Thông tin tuyến đường',
-        to: '/buttons/buttons',
+        name: "Thông tin tuyến đường",
+        to: "/buttons/buttons",
         icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
-        name: 'Thông tin phương tiện',
-        to: '/buttons/button-groups',
+        name: "Thông tin phương tiện",
+        to: "/buttons/button-groups",
         icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
-        name: 'Thông tin MCPs',
-        to: '/buttons/dropdowns',
+        name: "Thông tin MCPs",
+        to: "/buttons/dropdowns",
         icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
       },
     ],
@@ -388,6 +385,6 @@ const _nav = [
   //   href: 'https://coreui.io/react/docs/templates/installation/',
   //   icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   // },
-]
+];
 
-export default _nav
+export default _nav;
