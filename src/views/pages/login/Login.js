@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Account from './account.json';
 import {
   CButton,
   CCard,
@@ -16,6 +15,23 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
+
+function Authen(){
+
+  //Assigning the variable to the user input
+  var result = document.getElementById("username").value;
+  // to print the input here
+  if (result === "backofficer")
+    {
+      alert("success");
+      window.location.href = "http://localhost:3000/#/home";
+    }
+  else
+    { 
+      alert("sai tài khoản mật khẩu");
+      window.location.reload();
+    }
+  }
 
 const Login = () => {
   return (
@@ -36,11 +52,7 @@ const Login = () => {
                       <CFormInput 
                         type = "text"
                         id = "username"
-                        // ref = {userRef}
-                        autoComplete = "off"
-                        // onChange = {(e) => setUser(e.target.value)}
-                        // // value = {user}
-                        // required   
+                        autoComplete = "off"  
                       />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
@@ -55,7 +67,7 @@ const Login = () => {
                     </CInputGroup>
                     <CRow>
                       <CCol xs={6}>
-                        <CButton color="primary" className="px-4">
+                        <CButton color="primary" className="px-4" onClick ={Authen}>
                           Login
                         </CButton>
                       </CCol>
