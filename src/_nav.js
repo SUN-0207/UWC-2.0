@@ -7,15 +7,16 @@ import {
   cilCart,
   cilInfo,
   cilList,
+  cilMap,
 } from "@coreui/icons";
 import { CNavGroup, CNavItem, CNavTitle } from "@coreui/react";
 
 const _nav = [
   {
     component: CNavItem,
-    name: "Lịch làm việc",
+    name: "Trang chủ",
     to: "/workcalendar",
-    icon: <CIcon icon={cilCalendar} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilMap} customClassName="nav-icon" />,
     badge: {
       color: "info",
       text: "NEW",
@@ -27,7 +28,7 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: "Lịch thu gom",
+    name: "Lịch trình",
     to: "/theme/colors",
     icon: <CIcon icon={cilCalendar} customClassName="nav-icon" />,
   },
@@ -80,37 +81,37 @@ const _nav = [
       },
     ],
   },
-  {
-    component: CNavTitle,
-    name: "Nhân viên",
-  },
+  // {
+  //   component: CNavTitle,
+  //   name: "Nhân viên",
+  // },
 
-  {
-    component: CNavGroup,
-    name: "Thông tin công việc",
-    to: "/buttons",
-    icon: <CIcon icon={cilInfo} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: "Thông tin tuyến đường",
-        to: "/buttons/buttons",
-        icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
-      },
-      {
-        component: CNavItem,
-        name: "Thông tin phương tiện",
-        to: "/buttons/button-groups",
-        icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
-      },
-      {
-        component: CNavItem,
-        name: "Thông tin MCPs",
-        to: "/buttons/dropdowns",
-        icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
-      },
-    ],
-  },
+  // {
+  //   component: CNavGroup,
+  //   name: "Thông tin công việc",
+  //   to: "/buttons",
+  //   icon: <CIcon icon={cilInfo} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: "Thông tin tuyến đường",
+  //       to: "/buttons/buttons",
+  //       icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Thông tin phương tiện",
+  //       to: "/buttons/button-groups",
+  //       icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Thông tin MCPs",
+  //       to: "/buttons/dropdowns",
+  //       icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
+  //     },
+  //   ],
+  // },
   // {
   //   component: CNavTitle,
   //   name: 'Theme',
