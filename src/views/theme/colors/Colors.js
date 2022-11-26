@@ -1,91 +1,143 @@
-import PropTypes from 'prop-types'
-import React, { useEffect, useState, createRef } from 'react'
-import classNames from 'classnames'
-import { CRow, CCol, CCard, CCardHeader, CCardBody } from '@coreui/react'
-import { rgbToHex } from '@coreui/utils'
-import { DocsLink } from 'src/components'
+import PropTypes from "prop-types";
+import React, { useEffect, useState, createRef } from "react";
+import classNames from "classnames";
+import { CRow, CCol, CCard, CCardHeader, CCardBody } from "@coreui/react";
+import { rgbToHex } from "@coreui/utils";
+import { DocsLink } from "src/components";
+import Kalend, { CalendarView } from "kalend"; // import component
+import "kalend/dist/styles/index.css";
 
-const ThemeView = () => {
-  const [color, setColor] = useState('rgb(255, 255, 255)')
-  const ref = createRef()
+// const ThemeView = () => {
+//   const [color, setColor] = useState("rgb(255, 255, 255)");
+//   const ref = createRef();
 
-  useEffect(() => {
-    const el = ref.current.parentNode.firstChild
-    const varColor = window.getComputedStyle(el).getPropertyValue('background-color')
-    setColor(varColor)
-  }, [ref])
+//   useEffect(() => {
+//     const el = ref.current.parentNode.firstChild;
+//     const varColor = window
+//       .getComputedStyle(el)
+//       .getPropertyValue("background-color");
+//     setColor(varColor);
+//   }, [ref]);
 
-  return (
-    <table className="table w-100" ref={ref}>
-      <tbody>
-        <tr>
-          <td className="text-medium-emphasis">HEX:</td>
-          <td className="font-weight-bold">{rgbToHex(color)}</td>
-        </tr>
-        <tr>
-          <td className="text-medium-emphasis">RGB:</td>
-          <td className="font-weight-bold">{color}</td>
-        </tr>
-      </tbody>
-    </table>
-  )
-}
+//   return (
+//     <table className="table w-100" ref={ref}>
+//       <tbody>
+//         <tr>
+//           <td className="text-medium-emphasis">HEX:</td>
+//           <td className="font-weight-bold">{rgbToHex(color)}</td>
+//         </tr>
+//         <tr>
+//           <td className="text-medium-emphasis">RGB:</td>
+//           <td className="font-weight-bold">{color}</td>
+//         </tr>
+//       </tbody>
+//     </table>
+//   );
+// };
 
-const ThemeColor = ({ className, children }) => {
-  const classes = classNames(className, 'theme-color w-75 rounded mb-3')
-  return (
-    <CCol xs={12} sm={6} md={4} xl={2} className="mb-4">
-      <div className={classes} style={{ paddingTop: '75%' }}></div>
-      {children}
-      <ThemeView />
-    </CCol>
-  )
-}
+// const ThemeColor = ({ className, children }) => {
+//   const classes = classNames(className, "theme-color w-75 rounded mb-3");
+//   return (
+//     <CCol xs={12} sm={6} md={4} xl={2} className="mb-4">
+//       <div className={classes} style={{ paddingTop: "75%" }}></div>
+//       {children}
+//       <ThemeView />
+//     </CCol>
+//   );
+// };
 
-ThemeColor.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-}
+// ThemeColor.propTypes = {
+//   children: PropTypes.node,
+//   className: PropTypes.string,
+// };
 
 const Colors = () => {
   return (
     <>
-      <CCard className="mb-4">
-        <CCardHeader>
-          Theme colors
-          <DocsLink href="https://coreui.io/docs/utilities/colors/" />
-        </CCardHeader>
-        <CCardBody>
-          <CRow>
-            <ThemeColor className="bg-primary">
-              <h6>Brand Primary Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-secondary">
-              <h6>Brand Secondary Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-success">
-              <h6>Brand Success Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-danger">
-              <h6>Brand Danger Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-warning">
-              <h6>Brand Warning Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-info">
-              <h6>Brand Info Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-light">
-              <h6>Brand Light Color</h6>
-            </ThemeColor>
-            <ThemeColor className="bg-dark">
-              <h6>Brand Dark Color</h6>
-            </ThemeColor>
-          </CRow>
-        </CCardBody>
-      </CCard>
+      <Kalend
+        // onEventClick={onEventClick}
+        // onNewEventClick={onNewEventClick}
+        events={[
+          {
+            id: 1,
+            startAt: "2022-11-25T20:00:00.000Z",
+            endAt: "2022-11-25T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+            calendarID: "work",
+          },
+          {
+            id: 2,
+            startAt: "2022-11-25T18:00:00.000Z",
+            endAt: "2022-11-25T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+          {
+            id: 3,
+            startAt: "2022-11-25T18:00:00.000Z",
+            endAt: "2022-11-25T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+          {
+            id: 4,
+            startAt: "2022-11-24T18:00:00.000Z",
+            endAt: "2022-11-25T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+          {
+            id: 5,
+            startAt: "2022-11-25T18:00:00.000Z",
+            endAt: "2022-11-26T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+          {
+            id: 6,
+            startAt: "2022-11-25T18:00:00.000Z",
+            endAt: "2022-11-27T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+          {
+            id: 7,
+            startAt: "2022-11-25T18:00:00.000Z",
+            endAt: "2022-11-28T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+          {
+            id: 8,
+            startAt: "2022-11-25T18:00:00.000Z",
+            endAt: "2022-11-27T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+          {
+            id: 9,
+            startAt: "2022-11-25T18:00:00.000Z",
+            endAt: "2022-11-27T19:00:00.000Z",
+            summary: "test",
+            color: "blue",
+          },
+        ]}
+        initialDate={new Date().toISOString()}
+        hourHeight={40}
+        initialView={CalendarView.WEEK}
+        // onSelectView={onSelectView}
+        // selectedView={selectedView}
+        // onPageChange={onPageChange}
+        timeFormat={"24"}
+        weekDayStart={"Monday"}
+        calendarIDsHidden={["work"]}
+        language={"en"}
+        isDark={"false"}
+        showTimeLine={"true"}
+      />
     </>
-  )
-}
+  );
+};
 
-export default Colors
+export default Colors;
