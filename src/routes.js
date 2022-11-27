@@ -52,7 +52,7 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 // const overallCalendar = React.lazy(() => import('./views/pages/BO/calendar'))
 // const overallEInfo = React.lazy(() => import('./views/pages/BO/employee'))
 // const overallTInfo = React.lazy(() => import('./views/pages/BO/truck'))
-// const overallMInfo = React.lazy(() => import('./views/pages/BO/mcp'))
+const Info = React.lazy(() => import('./views/pages/BO/info'))
 
 // const employeeCalendar = React.lazy(() => import('./views/pages/employee/calendar/calendar'))
 // const employeeRoute = React.lazy(() => import('./views/pages/employee/route/route'))
@@ -64,6 +64,7 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
+  { path: '/infoList', name: 'InfoList', element: Info},
   { path: '/workcalendar', name: 'Work Calendar', element: Dashboard },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
