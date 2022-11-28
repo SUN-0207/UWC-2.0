@@ -77,8 +77,8 @@ const Toasts = React.lazy(() => import("./views/notifications/toasts/Toasts"));
 //pages
 // const overallCalendar = React.lazy(() => import('./views/pages/BO/calendar'))
 // const overallEInfo = React.lazy(() => import('./views/pages/BO/employee'))
-// const overallTInfo = React.lazy(() => import('./views/pages/BO/truck'))
-// const overallMInfo = React.lazy(() => import('./views/pages/BO/mcp'))
+const Truck = React.lazy(() => import("./views/pages/BO/truck"));
+const Info = React.lazy(() => import("./views/pages/BO/info"));
 
 // const employeeCalendar = React.lazy(() => import('./views/pages/employee/calendar/calendar'))
 // const employeeRoute = React.lazy(() => import('./views/pages/employee/route/route'))
