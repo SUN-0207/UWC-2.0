@@ -36,6 +36,7 @@ function Table() {
                   <th>Usage</th>
                   <th>Status</th>
                   <th>Activity</th>
+                  <th>Thông tin</th>
                 </tr>
               </thead>
               <tbody>
@@ -47,13 +48,11 @@ function Table() {
                         <td>{result.name}</td>
                         <td>{result.usage}</td>
                         <td>
-                          <p>
                             {result.status === "Busy" && <CButton color="danger">Busy</CButton>}
                             {result.status === "Free" && <CButton color="success">Free</CButton>} 
-                          </p>
                         </td>
                         <td>{result.activity}</td>
-                        <td>{}</td>
+                        <td><CButton>Xem thêm</CButton></td>
                     </tr>
                 )
               })}

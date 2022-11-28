@@ -61,7 +61,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Thông tin phương tiện',
-        to: '/buttons/button-groups',
+        to: '/truckInfo',
         icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
       },
       {
