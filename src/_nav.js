@@ -29,7 +29,7 @@ const _nav = [
   {
     component: CNavItem,
     name: "Lịch trình",
-    to: "/theme/colors",
+    to: "/calendar",
     icon: <CIcon icon={cilCalendar} customClassName="nav-icon" />,
   },
   {
@@ -41,46 +41,46 @@ const _nav = [
       {
         component: CNavItem,
         name: "Thông tin nhân viên",
-        to: "/infoList",
+        to: "/Info",
         icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
         name: "Thông tin phương tiện",
-        to: "/truckInfo",
+        to: "/vehicle",
         icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
         name: "Thông tin MCPs",
-        to: "/buttons/dropdowns",
+        to: "/mcp",
         icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
       },
     ],
   },
-  {
-    component: CNavGroup,
-    name: "Quản lý công việc",
-    to: "/buttons",
-    icon: <CIcon icon={cilList} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: "Chỉ định phương tiện",
-        to: "/buttons/buttons",
-      },
-      {
-        component: CNavItem,
-        name: "Tạo tuyến đường",
-        to: "/buttons/button-groups",
-      },
-      {
-        component: CNavItem,
-        name: "Chỉ định nhân viên",
-        to: "/buttons/dropdowns",
-      },
-    ],
-  },
+  // {
+  //   component: CNavGroup,
+  //   name: "Quản lý công việc",
+  //   to: "/buttons",
+  //   icon: <CIcon icon={cilList} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: "Chỉ định phương tiện",
+  //       to: "/buttons/buttons",
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Tạo tuyến đường",
+  //       to: "/buttons/button-groups",
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Chỉ định nhân viên",
+  //       to: "/buttons/dropdowns",
+  //     },
+  //   ],
+  // },
   // {
   //   component: CNavTitle,
   //   name: "Nhân viên",

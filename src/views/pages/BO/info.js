@@ -1,69 +1,138 @@
-import React from 'react'
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-import 'jquery/dist/jquery.min.js';
-import $ from 'jquery';
+import "jquery/dist/jquery.min.js";
+import $ from "jquery";
 //Datatable Modules
-import "datatables.net-dt/js/dataTables.dataTables"
-import "datatables.net-dt/css/jquery.dataTables.min.css"
-import data from "./list.json"
-import avatar from './Picture1.png'
+import "datatables.net-dt/js/dataTables.dataTables";
+import "datatables.net-dt/css/jquery.dataTables.min.css";
+import data from "../../../data/NhanVien";
+import Typography from "../../theme/typography/Typography";
 
-import { CCard, CCardHeader, CCardBody, CButton } from '@coreui/react'
+import {
+  CCard,
+  CCardHeader,
+  CCardBody,
+  CButton,
+  CAvatar,
+  CProgress,
+  CModal,
+  CModalHeader,
+  CModalBody,
+  CModalFooter,
+  CModalTitle,
+  CProgressBar,
+} from "@coreui/react";
 
 function Table() {
   // State array variable to save and show data
-  $(document).ready(function () {      
-    setTimeout(function(){
-      $('#sortTable').DataTable();
-    } ,1000);
-  }) 
-  return (
+  $(document).ready(function () {
+    setTimeout(function () {
+      $("#sortTable").DataTable();
+    }, 1000);
+  });
 
-    <CCard className="mb-4">
-        <CCardHeader>
-          Janitors
-          <img src = "./Picture1.png" alt =""/>
-        </CCardHeader>
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <>
+      <CCard className="mb-4">
+        <CCardHeader>Thông tin</CCardHeader>
         <CCardBody>
           <div>
             <div className="container">
-              <table id="sortTable" className="dataTable table-hover table-bordered">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th> </th>
-                  <th>User</th>
-                  <th>Usage</th>
-                  <th>Status</th>
-                  <th>Activity</th>
-                  <th>Thông tin</th>
-                </tr>
-              </thead>
-              <tbody>
-              {data.map((result) => { 
-                return (
-                    <tr key = {result.id}>
-                        <td>{result.id}</td>
-                        <td>{<img src ={result.avatar} width=""  height="" alt=""/>}</td>
-                        <td>{result.name}</td>
-                        <td>{result.usage}</td>
+              <table
+                id="sortTable"
+                className="dataTable table-hover table-bordered"
+              >
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: "center" }}>STT</th>
+                    <th> </th>
+                    <th style={{ textAlign: "center" }}>Họ và tên</th>
+                    <th style={{ textAlign: "center" }}>Tiến độ</th>
+                    <th style={{ textAlign: "center" }}>Trạng thái</th>
+                    <th style={{ textAlign: "center" }}>Hoạt động</th>
+                    <th style={{ textAlign: "center" }}>Thông tin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.map((result) => {
+                    return (
+                      <tr key={result.id}>
+                        <td style={{ textAlign: "center" }}>{result.id}</td>
                         <td>
-                            {result.status === "Busy" && <CButton color="danger">Busy</CButton>}
-                            {result.status === "Free" && <CButton color="success">Free</CButton>} 
+                          <div
+                            style={{
+                              justifyContent: "center",
+                              display: "flex",
+                            }}
+                          >
+                            <CAvatar src={result.src_img} size="xl" />
+                          </div>
                         </td>
-                        <td>{result.activity}</td>
-                        <td><CButton>Xem thêm</CButton></td>
-                    </tr>
-                )
-              })}
-              </tbody>
+                        <td style={{ textAlign: "center" }}>{result.name}</td>
+                        <td>
+                          <CProgress className="mb-3">
+                            <CProgressBar
+                              color={
+                                result.status === "Busy" ? "danger" : "success"
+                              }
+                              variant="striped"
+                              animated
+                              value={Math.floor(Math.random() * 101)}
+                            />
+                          </CProgress>
+                        </td>
+                        <td style={{ textAlign: "center" }}>
+                          <CButton
+                            color={
+                              result.status === "Busy" ? "danger" : "success"
+                            }
+                          >
+                            {result.status}
+                          </CButton>
+                        </td>
+                        <td style={{ textAlign: "center" }}>
+                          {result.activity}
+                        </td>
+                        <td style={{ textAlign: "center" }}>
+                          <CButton
+                            key={result.id}
+                            onClick={() => setVisible(!visible)}
+                          >
+                            Xem thêm
+                          </CButton>
+
+                          <CModal
+                            key={result.id}
+                            size="xl"
+                            visible={visible}
+                            onClose={() => setVisible(false)}
+                          >
+                            <CModalBody>
+                              <Typography key={result.id} result={result} />
+                            </CModalBody>
+                            <CModalFooter>
+                              <CButton
+                                color="secondary"
+                                onClick={() => setVisible(false)}
+                              >
+                                Đóng
+                              </CButton>
+                            </CModalFooter>
+                          </CModal>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
               </table>
             </div>
           </div>
         </CCardBody>
       </CCard>
-
-    
+    </>
   );
 }
 export default Table;
