@@ -67,7 +67,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Thông tin MCPs',
-        to: '/buttons/dropdowns',
+        to: '/mcpInfo',
         icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
       },
     ],

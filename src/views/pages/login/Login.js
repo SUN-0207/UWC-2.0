@@ -31,7 +31,7 @@ function Authen(){
       alert("sai tài khoản mật khẩu");
       window.location.reload();
     }
-  }
+}
 
 const Login = () => {
   return (
