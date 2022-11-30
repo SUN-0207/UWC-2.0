@@ -21,7 +21,7 @@ function Authen() {
   var result = document.getElementById("username").value;
   // to print the input here
   if (result === "admin") {
-    alert("success");
+    alert("Đăng nhập thành công");
     window.location.href = "http://localhost:3000/#/home";
   } else {
     alert("sai tài khoản mật khẩu");
@@ -50,6 +50,7 @@ const Login = () => {
                       <CFormInput
                         type="text"
                         id="username"
+                        placeholder="Username"
                         autoComplete="off"
                       />
                     </CInputGroup>
@@ -88,12 +89,12 @@ const Login = () => {
               >
                 <CCardBody className="text-center">
                   <div>
-                    <h2>Sign up</h2>
-                    <p>
+                    <h1>Sign up</h1>
+                    {/* <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua.
-                    </p>
+                    </p> */}
                     <Link to="/register">
                       <CButton
                         color="primary"

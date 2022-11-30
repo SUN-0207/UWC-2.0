@@ -218,77 +218,77 @@ const Dashboard = () => {
         <CircleMarker
           center={[10.879342, 106.798991]}
           pathOptions={{ color: "red" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.8788013, 106.796983]}
           pathOptions={{ color: "red" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.87995, 106.801881]}
           pathOptions={{ color: "red" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.880636, 106.795301]}
           pathOptions={{ color: "red" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.876501, 106.7984]}
           pathOptions={{ color: "red" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.875171, 106.799874]}
           pathOptions={{ color: "blue" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.875792, 106.804937]}
           pathOptions={{ color: "blue" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.877644, 106.804627]}
           pathOptions={{ color: "blue" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.881857, 106.808505]}
           pathOptions={{ color: "blue" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.8797, 106.810046]}
           pathOptions={{ color: "blue" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>
         <CircleMarker
           center={[10.875517, 106.794731]}
           pathOptions={{ color: "blue" }}
-          radius={25}
+          radius={15}
         >
           <Tooltip>MCP</Tooltip>
         </CircleMarker>

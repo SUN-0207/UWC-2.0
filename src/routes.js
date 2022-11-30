@@ -1,7 +1,6 @@
 import React from "react";
 
 const Dashboard = React.lazy(() => import("./views/dashboard/Dashboard"));
-const Colors = React.lazy(() => import("./views/theme/colors/Colors"));
 const Typography = React.lazy(() =>
   import("./views/theme/typography/Typography")
 );
@@ -77,8 +76,10 @@ const Toasts = React.lazy(() => import("./views/notifications/toasts/Toasts"));
 //pages
 // const overallCalendar = React.lazy(() => import('./views/pages/BO/calendar'))
 // const overallEInfo = React.lazy(() => import('./views/pages/BO/employee'))
-// const overallTInfo = React.lazy(() => import('./views/pages/BO/truck'))
-// const overallMInfo = React.lazy(() => import('./views/pages/BO/mcp'))
+const Vehicle = React.lazy(() => import("./views/pages/BO/truck"));
+const Info = React.lazy(() => import("./views/pages/BO/info"));
+const MCP = React.lazy(() => import("./views/pages/BO/mcp"));
+const Calendar = React.lazy(() => import("./views/theme/colors/Colors.js"));
 
 // const employeeCalendar = React.lazy(() => import('./views/pages/employee/calendar/calendar'))
 // const employeeRoute = React.lazy(() => import('./views/pages/employee/route/route'))
@@ -91,8 +92,6 @@ const Widgets = React.lazy(() => import("./views/widgets/Widgets"));
 const routes = [
   { path: "/", exact: true, name: "Home" },
   { path: "/workcalendar", name: "Trang chủ", element: Dashboard },
-  { path: "/theme", name: "Lịch trình", element: Colors, exact: true },
-  { path: "/theme/colors", name: "", element: Colors },
   { path: "/theme/typography", name: "Typography", element: Typography },
   { path: "/base", name: "Base", element: Cards, exact: true },
   { path: "/base/accordion", name: "Accordion", element: Accordion },
@@ -109,13 +108,16 @@ const routes = [
   { path: "/base/spinners", name: "Spinners", element: Spinners },
   { path: "/base/tables", name: "Tables", element: Tables },
   { path: "/base/tooltips", name: "Tooltips", element: Tooltips },
+  { path: "/vehicle", name: "Thông tin phương tiện", element: Vehicle },
+  { path: "/mcp", name: "Thông tin MCPs", element: MCP },
+  { path: "/calendar", name: "Lịch trình", element: Calendar },
   {
     path: "/buttons",
     name: "Quản lý nhân viên",
     element: Buttons,
     exact: true,
   },
-  { path: "/buttons/buttons", name: "Thông tin nhân viên", element: Buttons },
+  { path: "/Info", name: "Thông tin nhân viên", element: Info },
   { path: "/buttons/dropdowns", name: "Thông tin MCP", element: Dropdowns },
   {
     path: "/buttons/button-groups",
