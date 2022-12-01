@@ -26,13 +26,13 @@ import {
 
 function Table() {
   // State array variable to save and show data
-  $(document).ready(function () {
-    setTimeout(function () {
-      $("#sortTable").DataTable();
-    }, 1000);
-  });
+  // $(document).ready(function () {
+  //   setTimeout(function () {
+  //     $("#sortTable").DataTable();
+  //   }, 1000);
+  // });
 
-  const [visible, setVisible] = useState(false);
+  const [idxVisible, setIdxVisible] = useState(-1);
 
   return (
     <>
@@ -97,26 +97,21 @@ function Table() {
                           {result.activity}
                         </td>
                         <td style={{ textAlign: "center" }}>
-                          <CButton
-                            key={result.id}
-                            onClick={() => setVisible(!visible)}
-                          >
+                          <CButton onClick={() => setIdxVisible(result.id)}>
                             Xem thêm
                           </CButton>
-
                           <CModal
-                            key={result.id}
                             size="xl"
-                            visible={visible}
-                            onClose={() => setVisible(false)}
+                            visible={idxVisible === result.id}
+                            onClose={() => setIdxVisible(-1)}
                           >
                             <CModalBody>
-                              <Typography key={result.id} result={result} />
+                              <Typography result={result} />
                             </CModalBody>
                             <CModalFooter>
                               <CButton
                                 color="secondary"
-                                onClick={() => setVisible(false)}
+                                onClick={() => setIdxVisible(-1)}
                               >
                                 Đóng
                               </CButton>
