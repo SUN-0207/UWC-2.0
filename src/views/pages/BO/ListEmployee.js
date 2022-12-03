@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 
 import "jquery/dist/jquery.min.js";
 import $ from "jquery";
@@ -7,7 +6,7 @@ import $ from "jquery";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import data from "../../../data/NhanVien";
-import Typography from "../../theme/typography/Typography";
+import InforEmployee from "src/components/information/InfoEmployee";
 
 import {
   CCard,
@@ -17,20 +16,18 @@ import {
   CAvatar,
   CProgress,
   CModal,
-  CModalHeader,
   CModalBody,
   CModalFooter,
-  CModalTitle,
   CProgressBar,
+  CBadge,
 } from "@coreui/react";
 
-function Table() {
-  // State array variable to save and show data
-  // $(document).ready(function () {
-  //   setTimeout(function () {
-  //     $("#sortTable").DataTable();
-  //   }, 1000);
-  // });
+function ListEmployee() {
+  $(document).ready(function () {
+    setTimeout(function () {
+      $("#sortTable").DataTable();
+    }, 1000);
+  });
 
   const [idxVisible, setIdxVisible] = useState(-1);
 
@@ -41,10 +38,7 @@ function Table() {
         <CCardBody>
           <div>
             <div className="container">
-              <table
-                id="sortTable"
-                className="dataTable table-hover table-bordered"
-              >
+              <table id="sortTable" className="dataTable">
                 <thead>
                   <tr>
                     <th style={{ textAlign: "center" }}>STT</th>
@@ -85,19 +79,23 @@ function Table() {
                           </CProgress>
                         </td>
                         <td style={{ textAlign: "center" }}>
-                          <CButton
+                          <CBadge
                             color={
                               result.status === "Busy" ? "danger" : "success"
                             }
+                            shape="rounded-pill"
                           >
                             {result.status}
-                          </CButton>
+                          </CBadge>
                         </td>
                         <td style={{ textAlign: "center" }}>
                           {result.activity}
                         </td>
                         <td style={{ textAlign: "center" }}>
-                          <CButton onClick={() => setIdxVisible(result.id)}>
+                          <CButton
+                            color="info"
+                            onClick={() => setIdxVisible(result.id)}
+                          >
                             Xem thêm
                           </CButton>
                           <CModal
@@ -106,7 +104,7 @@ function Table() {
                             onClose={() => setIdxVisible(-1)}
                           >
                             <CModalBody>
-                              <Typography result={result} />
+                              <InforEmployee result={result} />
                             </CModalBody>
                             <CModalFooter>
                               <CButton
@@ -130,4 +128,4 @@ function Table() {
     </>
   );
 }
-export default Table;
+export default ListEmployee;

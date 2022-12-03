@@ -11,12 +11,7 @@ import {
 import { getStyle } from "@coreui/utils";
 import { CChartBar, CChartLine } from "@coreui/react-chartjs";
 import CIcon from "@coreui/icons-react";
-import {
-  cilArrowBottom,
-  cilArrowTop,
-  cilOptions,
-  cilCircle,
-} from "@coreui/icons";
+import { cilOptions, cilCircle } from "@coreui/icons";
 
 const WidgetsDropdown = () => {
   return (
@@ -29,7 +24,6 @@ const WidgetsDropdown = () => {
             <>
               30{" "}
               <span className="fs-6 fw-normal">
-                {/* (Đang rảnh{" "} */}
                 <CIcon
                   style={{
                     backgroundColor: "green",
@@ -39,7 +33,6 @@ const WidgetsDropdown = () => {
                   size="xl"
                   icon={cilCircle}
                 />
-                {/* ) */}
               </span>
             </>
           }
@@ -56,12 +49,6 @@ const WidgetsDropdown = () => {
                   className="text-high-emphasis-inverse"
                 />
               </CDropdownToggle>
-              {/* <CDropdownMenu>
-                <CDropdownItem>Action</CDropdownItem>
-                <CDropdownItem>Another action</CDropdownItem>
-                <CDropdownItem>Something else here...</CDropdownItem>
-                <CDropdownItem disabled>Disabled action</CDropdownItem>
-              </CDropdownMenu> */}
             </CDropdown>
           }
           chart={

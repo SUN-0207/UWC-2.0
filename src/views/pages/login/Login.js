@@ -39,10 +39,7 @@ const Login = () => {
               <CCard className="p-4">
                 <CCardBody>
                   <CForm>
-                    <h1>Login</h1>
-                    <p className="text-medium-emphasis">
-                      Sign In to your account
-                    </p>
+                    <h1>Đăng nhập</h1>
                     <CInputGroup className="mb-3">
                       <CInputGroupText>
                         <CIcon icon={cilUser} />
@@ -71,12 +68,12 @@ const Login = () => {
                           className="px-4"
                           onClick={Authen}
                         >
-                          Login
+                          Đăng nhập
                         </CButton>
                       </CCol>
                       <CCol xs={6} className="text-right">
                         <CButton color="link" className="px-0">
-                          Forgot password?
+                          Quên mật khẩu?
                         </CButton>
                       </CCol>
                     </CRow>
@@ -89,12 +86,7 @@ const Login = () => {
               >
                 <CCardBody className="text-center">
                   <div>
-                    <h1>Sign up</h1>
-                    {/* <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p> */}
+                    <h1>Đăng ký</h1>
                     <Link to="/register">
                       <CButton
                         color="primary"
@@ -102,7 +94,7 @@ const Login = () => {
                         active
                         tabIndex={-1}
                       >
-                        Register Now!
+                        Đăng ký ngay!
                       </CButton>
                     </Link>
                   </div>

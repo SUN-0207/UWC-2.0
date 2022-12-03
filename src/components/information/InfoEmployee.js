@@ -1,11 +1,8 @@
-import React, {useState, useEffect} from "react";
-import { CCard, CCardHeader, CCardBody, CFormSelect } from "@coreui/react";
-import { DocsLink } from "src/components";
-import avatar from "../../../assets/images/avatars/1.jpg";
+import React from "react";
 import "./dropdown.css";
 import PropTypes from "prop-types";
 
-const Typography = ({ result }) => {
+const InforEmployee = ({ result }) => {
   return (
     <>
       <div className="container-fluid">
@@ -22,12 +19,12 @@ const Typography = ({ result }) => {
               <div className="card-body text-center shadow">
                 <img
                   className="rounded-circle mb-3 mt-4"
-                  src={avatar}
+                  src={result.src_img}
                   alt="avatar"
                   width="160"
                   height="160"
                 />
-                <h4 className="small fw-bold">ID: 2010767</h4>
+                <h4 className="small fw-bold">{result.mssv}</h4>
                 <div className="mb-3">
                   <button className="btn btn-primary btn-sm" type="button">
                     Thay đổi ảnh
@@ -211,6 +208,7 @@ const Typography = ({ result }) => {
                           type="text"
                           placeholder="012345678"
                           name="address"
+                          value={result.phone_number}
                         />
                       </div>
                       <div className="mb-3">
@@ -224,6 +222,7 @@ const Typography = ({ result }) => {
                           type="text"
                           placeholder="KTX Khu A ĐHQG-HCM"
                           name="address"
+                          value={result.address}
                         />
                       </div>
                       <div className="row">
@@ -238,6 +237,7 @@ const Typography = ({ result }) => {
                               type="text"
                               placeholder="Thủ Đức"
                               name="city"
+                              value={result.district}
                             />
                           </div>
                         </div>
@@ -253,6 +253,7 @@ const Typography = ({ result }) => {
                               type="text"
                               placeholder="Hồ Chí Minh"
                               name="country"
+                              value={result.city}
                             />
                           </div>
                         </div>
@@ -276,15 +277,6 @@ const Typography = ({ result }) => {
                     <form>
                       <div className="row">
                         <div className="col">
-                          {/* <CFormSelect aria-label="Default select example">
-                            <option>Chọn MCP</option>
-                            <option value="1">Vị trí 1</option>
-                            <option value="2">Vị trí 2</option>
-                            <option value="3" disabled>
-                              Vị trí 3
-                            </option>
-                          </CFormSelect> */}
-
                           <div className="mb-3">
                             <label className="form-label" htmlFor="email">
                               <strong>Chọn MCP</strong>
@@ -459,8 +451,8 @@ const Typography = ({ result }) => {
   );
 };
 
-Typography.propTypes = {
+InforEmployee.propTypes = {
   result: PropTypes.node.isRequired,
 };
 
-export default Typography;
+export default InforEmployee;

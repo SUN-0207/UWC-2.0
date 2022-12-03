@@ -1,13 +1,8 @@
-import PropTypes from "prop-types";
-import React, { useEffect, useState, createRef } from "react";
-import classNames from "classnames";
-import { CRow, CCol, CCard, CCardHeader, CCardBody } from "@coreui/react";
-import { rgbToHex } from "@coreui/utils";
-import { DocsLink } from "src/components";
+import React from "react";
 import Kalend, { CalendarView } from "kalend"; // import component
 import "kalend/dist/styles/index.css";
 
-const Colors = () => {
+const Calendar = () => {
   return (
     <div style={{ height: "100vh" }}>
       <Kalend
@@ -50,4 +45,4 @@ const Colors = () => {
   );
 };
 
-export default Colors;
+export default Calendar;
