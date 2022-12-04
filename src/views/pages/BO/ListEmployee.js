@@ -20,7 +20,11 @@ import {
   CModalFooter,
   CProgressBar,
   CBadge,
+  CHeaderText,
 } from "@coreui/react";
+
+import CIcon from "@coreui/icons-react";
+import { cilPlus } from "@coreui/icons";
 
 function ListEmployee() {
   $(document).ready(function () {
@@ -34,7 +38,12 @@ function ListEmployee() {
   return (
     <>
       <CCard className="mb-4">
-        <CCardHeader>Thông tin</CCardHeader>
+        <CCardHeader className="d-flex flex-row mb-2 justify-content-between">
+          <CHeaderText className="p-2">Thông tin nhân viên</CHeaderText>
+          <CButton>
+            <CIcon icon={cilPlus}></CIcon>Thêm
+          </CButton>
+        </CCardHeader>
         <CCardBody>
           <div>
             <div className="container">
@@ -66,7 +75,7 @@ function ListEmployee() {
                           </div>
                         </td>
                         <td style={{ textAlign: "center" }}>{result.name}</td>
-                        <td>
+                        <td style={{ textAlign: "center" }}>
                           <CProgress className="mb-3">
                             <CProgressBar
                               color={

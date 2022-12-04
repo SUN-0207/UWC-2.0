@@ -21,14 +21,14 @@ const AppHeader = () => {
 
   return (
     <CHeader position="sticky" className="mb-4">
-      <CContainer fluid>
+      <CContainer fluid className="d-flex flex-row justify-content-between">
         <CHeaderToggler
           className="ps-1"
           onClick={() => dispatch({ type: "set", sidebarShow: !sidebarShow })}
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <CHeaderNav>
+        {/* <CHeaderNav class>
           <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilBell} size="lg" />
@@ -44,7 +44,7 @@ const AppHeader = () => {
               <CIcon icon={cilEnvelopeOpen} size="lg" />
             </CNavLink>
           </CNavItem>
-        </CHeaderNav>
+        </CHeaderNav> */}
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>

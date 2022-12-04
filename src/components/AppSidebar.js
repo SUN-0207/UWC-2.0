@@ -10,7 +10,7 @@ import {
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
-import { cilBoltCircle } from "@coreui/icons";
+import { cilTrash } from "@coreui/icons";
 
 import { AppSidebarNav } from "./AppSidebarNav";
 
@@ -35,12 +35,10 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CIcon
-          className="sidebar-brand-full"
-          icon={cilBoltCircle}
-          height={35}
-        />
-        <CHeaderBrand href="#">UWC 2.0</CHeaderBrand>
+        <CIcon className="sidebar-brand-full" icon={cilTrash} size="3xl" />
+        <CHeaderBrand className="p-3 fs-2 font-monospace" href="#/home">
+          UWC 2.0
+        </CHeaderBrand>
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>

@@ -4,7 +4,7 @@ import "kalend/dist/styles/index.css";
 
 const Calendar = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", overflow: "hidden" }}>
       <Kalend
         events={[
           {
