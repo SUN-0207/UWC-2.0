@@ -11,6 +11,7 @@ const NhanVien = [
     usage: 70,
     status: "Busy",
     activity: "20 giây trước",
+    mssv: "201xxxx",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const NhanVien = [
     usage: 54,
     status: "Free",
     activity: "1 tiếng trước",
+    mssv: "201xxxx",
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ const NhanVien = [
     usage: 45,
     status: "Busy",
     activity: "3 giây trước",
+    mssv: "201xxxx",
   },
   {
     id: 4,
@@ -50,6 +53,7 @@ const NhanVien = [
     usage: 45,
     status: "Free",
     activity: "1 phút trước",
+    mssv: "201xxxx",
   },
   {
     id: 5,
@@ -63,6 +67,7 @@ const NhanVien = [
     usage: 50,
     status: "Free",
     activity: "19 phút trước",
+    mssv: "201xxxx",
   },
   {
     id: 6,
@@ -76,6 +81,7 @@ const NhanVien = [
     usage: 50,
     status: "Free",
     activity: "25 giây trước",
+    mssv: "201xxxx",
   },
   {
     id: 7,
@@ -89,6 +95,7 @@ const NhanVien = [
     usage: 50,
     status: "Busy",
     activity: "Hôm qua",
+    mssv: "201xxxx",
   },
   {
     id: 8,
@@ -102,6 +109,7 @@ const NhanVien = [
     usage: 50,
     status: "Free",
     activity: "2 tiếng trước",
+    mssv: "201xxxx",
   },
   {
     id: 9,
@@ -115,6 +123,7 @@ const NhanVien = [
     usage: 50,
     status: "Free",
     activity: "30 phút trước",
+    mssv: "201xxxx",
   },
   {
     id: 10,
@@ -128,6 +137,7 @@ const NhanVien = [
     usage: 50,
     status: "Free",
     activity: "45 giây trước",
+    mssv: "201xxxx",
   },
 ];
 
