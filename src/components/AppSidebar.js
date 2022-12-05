@@ -15,6 +15,7 @@ import CIcon from "@coreui/icons-react";
 import { cilTrash } from "@coreui/icons";
 
 import { AppSidebarNav } from "./AppSidebarNav";
+import { useNavigate } from "react-router-dom";
 
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
@@ -26,6 +27,7 @@ const AppSidebar = () => {
   const dispatch = useDispatch();
   const unfoldable = useSelector((state) => state.sidebarUnfoldable);
   const sidebarShow = useSelector((state) => state.sidebarShow);
+  const navigate = useNavigate();
   useEffect(() => {
     WebFont.load({
       google: {
@@ -53,7 +55,7 @@ const AppSidebar = () => {
         <CHeaderBrand
           style={{ fontFamily: "Droid Sans" }}
           className="p-3 fs-2 font-weight-bold"
-          href="#/home"
+          onClick={() => navigate("/home")}
         >
           UWC 2.0
         </CHeaderBrand>

@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import routes from "../routes";
 
 import { CBreadcrumb, CBreadcrumbItem } from "@coreui/react";
+import { useNavigate } from "react-router-dom";
 
 const AppBreadcrumb = () => {
   const currentLocation = useLocation().pathname;
@@ -30,10 +31,11 @@ const AppBreadcrumb = () => {
   };
 
   const breadcrumbs = getBreadcrumbs(currentLocation);
+  const navigate = useNavigate();
 
   return (
     <CBreadcrumb className="m-0 ms-2">
-      <CBreadcrumbItem href="#/home">Home</CBreadcrumbItem>
+      <CBreadcrumbItem onClick={() => navigate("/home")}>Home</CBreadcrumbItem>
       {breadcrumbs.map((breadcrumb, index) => {
         return (
           <CBreadcrumbItem
