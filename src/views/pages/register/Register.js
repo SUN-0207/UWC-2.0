@@ -13,10 +13,12 @@ import {
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import { cilLockLocked, cilUser } from "@coreui/icons";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,8 +27,15 @@ const Register = () => {
     setUserName("");
     setPassword("");
     alert("Đăng ký thành công");
-    window.location.href = "http://localhost:3000/#/login";
+    navigate("/login");
   };
+
+  // useEffect(() => {
+  //   if (checkRegister) {
+  //     navigate("/login");
+  //     SetCheckRegister((prev) => !prev);
+  //   }
+  // }, [checkRegister, navigate]);
 
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">

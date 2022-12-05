@@ -61,10 +61,10 @@ const Vehicle = () => {
                         Chọn nhân viên
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="#">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="#">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="#">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="#">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Lâm Nhật Tân</CDropdownItem>
+                        <CDropdownItem>Cù Thanh Sơn</CDropdownItem>
+                        <CDropdownItem>Phương Chung Tú</CDropdownItem>
+                        <CDropdownItem>Thi Khắc Quân</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -75,10 +75,10 @@ const Vehicle = () => {
                         Chọn tuyến đường
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Tuyến 01</CDropdownItem>
+                        <CDropdownItem>Tuyến 02</CDropdownItem>
+                        <CDropdownItem>Tuyến 03</CDropdownItem>
+                        <CDropdownItem>Tuyến 04</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -119,10 +119,10 @@ const Vehicle = () => {
                         Chọn nhân viên
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="#">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="#">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="#">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="#">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Lâm Nhật Tân</CDropdownItem>
+                        <CDropdownItem>Cù Thanh Sơn</CDropdownItem>
+                        <CDropdownItem>Phương Chung Tú</CDropdownItem>
+                        <CDropdownItem>Thi Khắc Quân</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -133,10 +133,10 @@ const Vehicle = () => {
                         Chọn tuyến đường
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Tuyến 01</CDropdownItem>
+                        <CDropdownItem>Tuyến 02</CDropdownItem>
+                        <CDropdownItem>Tuyến 03</CDropdownItem>
+                        <CDropdownItem>Tuyến 04</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -177,10 +177,10 @@ const Vehicle = () => {
                         Chọn nhân viên
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="#">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="#">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="#">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="#">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Lâm Nhật Tân</CDropdownItem>
+                        <CDropdownItem>Cù Thanh Sơn</CDropdownItem>
+                        <CDropdownItem>Phương Chung Tú</CDropdownItem>
+                        <CDropdownItem>Thi Khắc Quân</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -191,9 +191,10 @@ const Vehicle = () => {
                         Chọn tuyến đường
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="">1</CDropdownItem>
-                        <CDropdownItem href="">2</CDropdownItem>
-                        <CDropdownItem href="">3</CDropdownItem>
+                        <CDropdownItem>Tuyến 01</CDropdownItem>
+                        <CDropdownItem>Tuyến 02</CDropdownItem>
+                        <CDropdownItem>Tuyến 03</CDropdownItem>
+                        <CDropdownItem>Tuyến 04</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -230,7 +231,7 @@ const Vehicle = () => {
                     </CBadge>
                   </CCardText>
                   <CCardText>
-                    Tình trạng xăng: {"   "}
+                    Tình trạng: {"   "}
                     <CBadge
                       className="ms-5"
                       color="warning"
@@ -246,10 +247,10 @@ const Vehicle = () => {
                         Chọn nhân viên
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="#">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="#">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="#">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="#">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Lâm Nhật Tân</CDropdownItem>
+                        <CDropdownItem>Cù Thanh Sơn</CDropdownItem>
+                        <CDropdownItem>Phương Chung Tú</CDropdownItem>
+                        <CDropdownItem>Thi Khắc Quân</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -260,10 +261,10 @@ const Vehicle = () => {
                         Chọn tuyến đường
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Tuyến 01</CDropdownItem>
+                        <CDropdownItem>Tuyến 02</CDropdownItem>
+                        <CDropdownItem>Tuyến 03</CDropdownItem>
+                        <CDropdownItem>Tuyến 04</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -304,10 +305,10 @@ const Vehicle = () => {
                         Chọn nhân viên
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="#">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="#">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="#">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="#">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Lâm Nhật Tân</CDropdownItem>
+                        <CDropdownItem>Cù Thanh Sơn</CDropdownItem>
+                        <CDropdownItem>Phương Chung Tú</CDropdownItem>
+                        <CDropdownItem>Thi Khắc Quân</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -318,10 +319,10 @@ const Vehicle = () => {
                         Chọn tuyến đường
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Tuyến 01</CDropdownItem>
+                        <CDropdownItem>Tuyến 02</CDropdownItem>
+                        <CDropdownItem>Tuyến 03</CDropdownItem>
+                        <CDropdownItem>Tuyến 04</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -362,10 +363,10 @@ const Vehicle = () => {
                         Chọn nhân viên
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="#">Lâm Nhật Tân</CDropdownItem>
-                        <CDropdownItem href="#">Cù Thanh Sơn</CDropdownItem>
-                        <CDropdownItem href="#">Phương Chung Tú</CDropdownItem>
-                        <CDropdownItem href="#">Thi Khắc Quân</CDropdownItem>
+                        <CDropdownItem>Tuyến 01</CDropdownItem>
+                        <CDropdownItem>Tuyến 02</CDropdownItem>
+                        <CDropdownItem>Tuyến 03</CDropdownItem>
+                        <CDropdownItem>Tuyến 04</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
@@ -376,16 +377,14 @@ const Vehicle = () => {
                         Chọn tuyến đường
                       </CDropdownToggle>
                       <CDropdownMenu>
-                        <CDropdownItem href="">1</CDropdownItem>
-                        <CDropdownItem href="">2</CDropdownItem>
-                        <CDropdownItem href="">3</CDropdownItem>
+                        <CDropdownItem>Tuyến 01</CDropdownItem>
+                        <CDropdownItem>Tuyến 02</CDropdownItem>
+                        <CDropdownItem>Tuyến 03</CDropdownItem>
+                        <CDropdownItem>Tuyến 04</CDropdownItem>
                       </CDropdownMenu>
                     </CDropdown>
                   </CCardText>
-                  <CButton
-                    className="mt-4 align-self-end btn btn-info"
-                    href="#"
-                  >
+                  <CButton className="mt-4 align-self-end btn btn-info">
                     Xem thêm
                   </CButton>
                 </CCardBody>

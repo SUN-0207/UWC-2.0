@@ -15,17 +15,19 @@ import {
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import { cilLockLocked, cilUser } from "@coreui/icons";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = localStorage.getItem("username");
     const pass = localStorage.getItem("password");
     if (username === name && password === pass) {
       alert("Đăng nhập thành công");
-      window.location.href = "http://localhost:3000/#/home";
+      navigate("/home");
     } else {
       alert("sai tài khoản mật khẩu");
       setPassword("");
