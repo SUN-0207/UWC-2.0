@@ -7,6 +7,7 @@ import {
   cilCart,
   cilInfo,
   cilMap,
+  cilChatBubble,
 } from "@coreui/icons";
 import { CNavGroup, CNavItem, CNavTitle } from "@coreui/react";
 
@@ -56,6 +57,12 @@ const _nav = [
         icon: <CIcon icon={cilCart} customClassName="nav-icon" />,
       },
     ],
+  },
+  {
+    component: CNavItem,
+    name: "Trò chuyện",
+    to: "/chat",
+    icon: <CIcon icon={cilChatBubble} customClassName="nav-icon" />,
   },
 ];
 

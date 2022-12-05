@@ -22,6 +22,7 @@ class App extends Component {
       <HashRouter>
         <Suspense fallback={loading}>
           <Routes>
+            <Route path="/" element={<Navigate to="/login" />} />
             <Route exact path="/login" name="Login Page" element={<Login />} />
             <Route
               exact

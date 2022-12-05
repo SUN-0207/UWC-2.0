@@ -76,7 +76,7 @@ function ListEmployee() {
                         </td>
                         <td style={{ textAlign: "center" }}>{result.name}</td>
                         <td style={{ textAlign: "center" }}>
-                          <CProgress className="mb-3">
+                          <CProgress>
                             <CProgressBar
                               color={
                                 result.status === "Busy" ? "danger" : "success"
@@ -93,6 +93,7 @@ function ListEmployee() {
                               result.status === "Busy" ? "danger" : "success"
                             }
                             shape="rounded-pill"
+                            className="mt-1"
                           >
                             {result.status}
                           </CBadge>

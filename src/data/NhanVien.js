@@ -12,6 +12,8 @@ const NhanVien = [
     status: "Busy",
     activity: "20 giây trước",
     mssv: "201xxxx",
+    send_msg: "Xin nghỉ làm",
+    received_msg: "Thời gian nghỉ",
   },
   {
     id: 2,
@@ -26,6 +28,8 @@ const NhanVien = [
     status: "Free",
     activity: "1 tiếng trước",
     mssv: "201xxxx",
+    send_msg: "Đã hoàn thành",
+    received_msg: "Xác nhận",
   },
   {
     id: 3,
@@ -40,6 +44,8 @@ const NhanVien = [
     status: "Busy",
     activity: "3 giây trước",
     mssv: "201xxxx",
+    send_msg: "Cần điều động thêm người",
+    received_msg: "Cần xác nhận vị trí",
   },
   {
     id: 4,
@@ -54,6 +60,8 @@ const NhanVien = [
     status: "Free",
     activity: "1 phút trước",
     mssv: "201xxxx",
+    send_msg: "Nhiệm vụ bị lỗi đường đi",
+    received_msg: "Xác nhận lỗi",
   },
   {
     id: 5,
@@ -68,6 +76,8 @@ const NhanVien = [
     status: "Free",
     activity: "19 phút trước",
     mssv: "201xxxx",
+    send_msg: "Xe hết xăng",
+    received_msg: "Tọa độ xác định",
   },
   {
     id: 6,
@@ -82,6 +92,8 @@ const NhanVien = [
     status: "Free",
     activity: "25 giây trước",
     mssv: "201xxxx",
+    send_msg: "Điều người đến vị trí",
+    received_msg: "Xác nhận",
   },
   {
     id: 7,
@@ -96,6 +108,8 @@ const NhanVien = [
     status: "Busy",
     activity: "Hôm qua",
     mssv: "201xxxx",
+    send_msg: "Xin nghỉ làm 2 ngày",
+    received_msg: "Xác nhận",
   },
   {
     id: 8,
@@ -110,6 +124,8 @@ const NhanVien = [
     status: "Free",
     activity: "2 tiếng trước",
     mssv: "201xxxx",
+    send_msg: "Nghỉ trước giờ 30 phút",
+    received_msg: "Xác nhận",
   },
   {
     id: 9,
@@ -124,6 +140,8 @@ const NhanVien = [
     status: "Free",
     activity: "30 phút trước",
     mssv: "201xxxx",
+    send_msg: "MCP đã đầy, cần thông báo",
+    received_msg: "Xác nhận",
   },
   {
     id: 10,
@@ -138,6 +156,8 @@ const NhanVien = [
     status: "Free",
     activity: "45 giây trước",
     mssv: "201xxxx",
+    send_msg: "Em muốn xin nghỉ luôn",
+    received_msg: "Xác nhận",
   },
 ];
 

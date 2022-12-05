@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   CButton,
@@ -16,20 +16,22 @@ import {
 import CIcon from "@coreui/icons-react";
 import { cilLockLocked, cilUser } from "@coreui/icons";
 
-function Authen() {
-  //Assigning the variable to the user input
-  var result = document.getElementById("username").value;
-  // to print the input here
-  if (result === "admin") {
-    alert("Đăng nhập thành công");
-    window.location.href = "http://localhost:3000/#/home";
-  } else {
-    alert("sai tài khoản mật khẩu");
-    window.location.reload();
-  }
-}
-
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = localStorage.getItem("username");
+    const pass = localStorage.getItem("password");
+    if (username === name && password === pass) {
+      alert("Đăng nhập thành công");
+      window.location.href = "http://localhost:3000/#/home";
+    } else {
+      alert("sai tài khoản mật khẩu");
+      setPassword("");
+      setUsername("");
+    }
+  };
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -38,7 +40,7 @@ const Login = () => {
             <CCardGroup>
               <CCard className="p-4">
                 <CCardBody>
-                  <CForm>
+                  <CForm onSubmit={handleSubmit}>
                     <h1>Đăng nhập</h1>
                     <CInputGroup className="mb-3">
                       <CInputGroupText>
@@ -46,9 +48,9 @@ const Login = () => {
                       </CInputGroupText>
                       <CFormInput
                         type="text"
-                        id="username"
                         placeholder="Username"
-                        autoComplete="off"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                       />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
@@ -58,16 +60,13 @@ const Login = () => {
                       <CFormInput
                         type="password"
                         placeholder="Password"
-                        autoComplete="current-password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </CInputGroup>
                     <CRow>
                       <CCol xs={6}>
-                        <CButton
-                          color="primary"
-                          className="px-4"
-                          onClick={Authen}
-                        >
+                        <CButton color="primary" className="px-4" type="submit">
                           Đăng nhập
                         </CButton>
                       </CCol>
