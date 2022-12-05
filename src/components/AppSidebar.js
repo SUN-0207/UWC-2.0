@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import WebFont from "webfontloader";
 
 import {
   CSidebar,
@@ -7,6 +8,7 @@ import {
   CSidebarNav,
   CSidebarToggler,
   CHeaderBrand,
+  CImage,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
@@ -24,7 +26,13 @@ const AppSidebar = () => {
   const dispatch = useDispatch();
   const unfoldable = useSelector((state) => state.sidebarUnfoldable);
   const sidebarShow = useSelector((state) => state.sidebarShow);
-
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Droid Sans", "Droid Serif"],
+      },
+    });
+  }, []);
   return (
     <CSidebar
       position="fixed"
@@ -34,9 +42,19 @@ const AppSidebar = () => {
         dispatch({ type: "set", sidebarShow: visible });
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CIcon className="sidebar-brand-full" icon={cilTrash} size="3xl" />
-        <CHeaderBrand className="p-3 fs-2 font-monospace" href="#/home">
+      <CSidebarBrand className="d-none d-md-flex p-2" to="/">
+        <CImage
+          fluid
+          width={80}
+          height={80}
+          src={require("../assets/images/logo-1.png")}
+        ></CImage>
+        {/* <CIcon className="sidebar-brand-full" icon={cilTrash} size="3xl" /> */}
+        <CHeaderBrand
+          style={{ fontFamily: "Droid Sans" }}
+          className="p-3 fs-2 font-weight-bold"
+          href="#/home"
+        >
           UWC 2.0
         </CHeaderBrand>
       </CSidebarBrand>
